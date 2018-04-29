@@ -1,0 +1,30 @@
+{{> htmlStart}} {{> header}}
+
+<main class="entrar">
+  <div class="entrar-container">
+    <div class="entrar-logar">
+      <div class="entrar-logar-titulo">Logar</div>
+      <form action="/entrar/logar" class="entrar-logar-form" method="post">
+        <label for="email" class="entrar-logar-form-label">E-mail</label>
+        <input type="text" name="email" class="entrar-logar-form-input" placeholder="Digite o seu e-mail">
+        <label for="senha" class="entrar-logar-form-label">Senha</label>
+        <input type="password" name="senha" class="entrar-logar-form-input" placeholder="Digite a sua senha">
+        <button type="submit" class="entrar-logar-form-btn">Logar</button>
+      </form>
+    </div>
+    <div class="entrar-cadastrar">
+      <div class="entrar-cadastrar-titulo">Cadastrar</div>
+      <form action="/entrar/cadastrar" class="entrar-cadastrar-form" method="post">
+        <label for="nome" class="entrar-cadastrar-form-label">Nome</label>
+        <input type="text" name="nome" class="entrar-cadastrar-form-input" placeholder="Digite o seu nome">
+        <label for="email" class="entrar-cadastrar-form-label">E-mail</label>
+        <input type="text" name="email" class="entrar-cadastrar-form-input" placeholder="Digite o seu e-mail">
+        <label for="senha" class="entrar-cadastrar-form-label">Senha</label>
+        <input type="password" name="senha" class="entrar-cadastrar-form-input" placeholder="Digite a sua senha">
+        <button type="submit" class="entrar-cadastrar-form-btn">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+{{> footer}} {{> htmlEnd}}

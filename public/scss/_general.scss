@@ -1,0 +1,74 @@
+/* Variaveis */
+
+$colorA: #80e5a6;
+$colorB: #90f0b4;
+$colorC: #caffde;
+
+$white: #fefefe;
+$black: #000;
+
+$fontA: "Roboto", sans-serif;
+
+$fontSizeA: 300;
+$fontSizeB: 400;
+$fontSizeC: 700;
+
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
+
+$headerSize: 80px;
+$footerSize: 40px;
+
+/* Mixins */
+
+@mixin mascara {
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Media Querys */
+
+@mixin small {
+  @media (min-width: #{$small + 1}) and (max-width: #{$medium}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$medium + 1}) and (max-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large + 1}) {
+    @content;
+  }
+}
+
+//HOW TO USE:
+// @include name-media-querie{
+// }
+
+/* CONTAINER */
+
+main {
+  min-height: calc(100vh - (#{$headerSize} + #{$footerSize}));
+
+  @include medium {
+    width: $medium;
+    min-height: calc(100vh - (#{$headerSize} + #{$footerSize}));
+    margin: 0 auto;
+  }
+
+  @include large {
+    width: $large;
+    min-height: calc(100vh - (#{$headerSize} + #{$footerSize}));
+    margin: 0 auto;
+  }
+}

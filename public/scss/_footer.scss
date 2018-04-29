@@ -1,0 +1,12 @@
+.footer {
+  height: $footerSize;
+  text-align: center;
+  font-family: $fontA;
+  font-size: 11px;
+  background-color: $white;
+  border-top: 2px solid $colorA;
+
+  &-copyright {
+    line-height: $footerSize;
+  }
+}

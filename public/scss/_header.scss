@@ -1,0 +1,51 @@
+.header {
+  height: $headerSize;
+  width: 100%;
+  background-color: $white;
+  display: flex;
+  border-bottom: 2px solid $colorA;
+  color: #666;
+  font-family: $fontA;
+  font-weight: $fontSizeA;
+}
+
+.logo,
+.menu,
+.login {
+  align-items: center;
+  text-align: center;
+  line-height: $headerSize;
+}
+
+.logo {
+  flex: 1;
+  margin-right: 10px;
+  font-weight: $fontSizeC;
+}
+
+.menu {
+  flex: 2;
+
+  &-lista {
+    &-item {
+      display: inline-block;
+    }
+
+    &-item:not(:first-of-type) {
+      margin-left: 20px;
+    }
+
+    &-link {
+      transition: 300ms;
+
+      &:hover {
+        color: $colorA;
+      }
+    }
+  }
+}
+
+.login {
+  flex: 1;
+  margin-left: 10px;
+}

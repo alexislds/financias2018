@@ -1,0 +1,436 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  color: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* Variaveis */
+/* Mixins */
+/* Media Querys */
+/* CONTAINER */
+main {
+  min-height: calc(100vh - (80px + 40px));
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  main {
+    width: 992px;
+    min-height: calc(100vh - (80px + 40px));
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1201px) {
+  main {
+    width: 1200px;
+    min-height: calc(100vh - (80px + 40px));
+    margin: 0 auto;
+  }
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: #fefefe;
+  display: flex;
+  border-bottom: 2px solid #80e5a6;
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.logo,
+.menu,
+.login {
+  align-items: center;
+  text-align: center;
+  line-height: 80px;
+}
+
+.logo {
+  flex: 1;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.menu {
+  flex: 2;
+}
+
+.menu-lista-item {
+  display: inline-block;
+}
+
+.menu-lista-item:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+.menu-lista-link {
+  transition: 300ms;
+}
+
+.menu-lista-link:hover {
+  color: #80e5a6;
+}
+
+.login {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.footer {
+  height: 40px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  background-color: #fefefe;
+  border-top: 2px solid #80e5a6;
+}
+
+.footer-copyright {
+  line-height: 40px;
+}
+
+.entrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.entrar-container {
+  width: 600px;
+  height: 454px;
+  border-radius: 7px;
+  position: relative;
+  overflow: hidden;
+}
+
+.entrar-logar, .entrar-cadastrar {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.entrar-logar {
+  background: #90f0b4;
+  display: flex;
+  flex-direction: column;
+  padding-top: 37px;
+  padding-left: 84px;
+}
+
+.entrar-logar-titulo {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fefefe;
+}
+
+.entrar-logar-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+  width: 434px;
+}
+
+.entrar-logar-form-label {
+  color: #fefefe;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.entrar-logar-form-label:not(:first-of-type) {
+  margin-top: 29px;
+}
+
+.entrar-logar-form-input {
+  background-color: rgba(0, 0, 0, 0.03);
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  color: #fefefe;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.entrar-logar-form-input::-webkit-input-placeholder {
+  color: #fefefe;
+  font-size: 12px;
+}
+
+.entrar-logar-form-input:-ms-input-placeholder {
+  color: #fefefe;
+  font-size: 12px;
+}
+
+.entrar-logar-form-input::-ms-input-placeholder {
+  color: #fefefe;
+  font-size: 12px;
+}
+
+.entrar-logar-form-input::placeholder {
+  color: #fefefe;
+  font-size: 12px;
+}
+
+.entrar-logar-form-btn {
+  height: 50px;
+  width: 50%;
+  align-self: center;
+  margin-top: 30px;
+  border-radius: 5px;
+  color: #fefefe;
+  background-color: #80e5a6;
+  text-transform: uppercase;
+  border: none;
+}
+
+.entrar-logar-form-btn:hover {
+  color: #fefefe;
+  background-color: #56dc88;
+  transition: background-color 300ms;
+}
+
+.entrar-cadastrar {
+  background: #56dc88;
+  left: calc(100% - 50px);
+  transition: 700ms;
+  display: flex;
+  justify-content: center;
+}
+
+.entrar-cadastrar-titulo {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 12px;
+  color: white;
+}
+
+.entrar-cadastrar-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 94px;
+  width: 434px;
+}
+
+.entrar-cadastrar-form-label {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.entrar-cadastrar-form-label:not(:first-of-type) {
+  margin-top: 29px;
+}
+
+.entrar-cadastrar-form-input {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  color: white;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.entrar-cadastrar-form-input::-webkit-input-placeholder {
+  color: white;
+  font-size: 12px;
+}
+
+.entrar-cadastrar-form-input:-ms-input-placeholder {
+  color: white;
+  font-size: 12px;
+}
+
+.entrar-cadastrar-form-input::-ms-input-placeholder {
+  color: white;
+  font-size: 12px;
+}
+
+.entrar-cadastrar-form-input::placeholder {
+  color: white;
+  font-size: 12px;
+}
+
+.entrar-cadastrar-form-btn {
+  height: 50px;
+  width: 50%;
+  align-self: center;
+  margin-top: 30px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  border: none;
+}
+
+.entrar-cadastrar-form-btn:hover {
+  color: #80e5a6;
+  background-color: #fefefe;
+  transition: background-color 300ms;
+}
+
+.entrar-cadastrar:hover {
+  left: 0;
+}
+
+.entrar-cadastrar:hover .entrar-cadastrar-titulo {
+  -webkit-writing-mode: unset;
+      -ms-writing-mode: unset;
+          writing-mode: unset;
+  text-orientation: unset;
+  font-size: 24px;
+  transition: 700ms;
+  top: 35px;
+  left: 80px;
+}
