@@ -11,7 +11,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 // INICIO
 app.listen('3000', () => {
-    console.log(`Servidor iniciado`);
+    console.log(`Servidor iniciado e funcionando`);
 });
 
 // ROTAS
